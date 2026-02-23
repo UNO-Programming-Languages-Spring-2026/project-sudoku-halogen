@@ -6,4 +6,24 @@
 
 % Your implementation please...
 
+% Define subgrid size.
+#const n = 4.
+
+% Create all possible boards.
+grid(1..n,1..n).
+value(1..n).
+
+% One value per "cell". This places a value at each X,Y, where X,Y is value(1..n)
+{ sudoku(X,Y,N) : value(N) } = 1 :- grid(X,Y).
+
+% achieved: Make sure that all generations follow initial state given by "user"
+sudoku(X,Y,N) :- initial(X,Y,N).
+
+% achieved: colwise values are distinct.
+:- sudoku(X,Y,N), sudoku(X1,Y,N), X != X1.
+
+% achieved: rowwise values are distinct.
+:- sudoku(X,Y,N), sudoku(X,Y1,N), Y != Y1.
+
+
 #show sudoku/3.
