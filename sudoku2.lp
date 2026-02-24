@@ -7,8 +7,9 @@
 % Your implementation please...
 
 % Define grid size.
-#const g = 9.
-#const n = 3.
+#const g = 4.
+% Define subgrid size.
+#const n = 2.
 
 % Create all possible boards.
 grid(1..g,1..g).

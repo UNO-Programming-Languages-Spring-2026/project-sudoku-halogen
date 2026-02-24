@@ -7,11 +7,13 @@
 % Your implementation please...
 
 % Define grid size.
-#const n = 4.
+#const g = 4.
+% Define subgrid size.
+#const n = 2.
 
 % Create all possible boards.
-grid(1..n,1..n).
-value(1..n).
+grid(1..g,1..g).
+value(1..g).
 
 % One value per "cell". where X,Y is value(1..n)
 { sudoku(X,Y,N) : value(N) } = 1 :- grid(X,Y).

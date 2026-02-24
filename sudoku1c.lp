@@ -8,6 +8,7 @@
 
 % Define grid size.
 #const g = 4.
+% Define subgrid size.
 #const n = 2.
 
 % Create all possible boards.
